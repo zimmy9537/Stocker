@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Stocker" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/app_primary</item>
+        <item name="colorPrimaryDark">@color/app_primary_dark</item>
+
+    </style>
+
+    <style name="Base.Theme.Stocker.BackGroundImageStyle">
+        <item name="android:windowBackground">@drawable/app_background</item>
+    </style>
+
+</resources>
