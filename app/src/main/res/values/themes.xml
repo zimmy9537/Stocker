@@ -6,7 +6,7 @@
     </style>
 
     <style name="Base.Theme.Stocker.BackGroundImageStyle">
-        <item name="android:windowBackground">@drawable/app_background</item>
+        <item name="android:windowBackground">@drawable/app_background_night</item>
     </style>
 
     <style name="Theme.Stocker" parent="Base.Theme.Stocker" />
