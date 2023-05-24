@@ -8,4 +8,7 @@
     <color name="app_secondary">#4597FF</color>
     <color name="app_secondary_dark">#177DFF</color>
     <color name="assent">#020D1A</color>
+    <color name="positive_green">#39A798</color>
+    <color name="negative_red">#E96D6D</color>
+    <color name="light_grey">#8B9199</color>
 </resources>

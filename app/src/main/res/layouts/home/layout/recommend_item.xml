@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dimen_180_dp"
+    android:layout_height="@dimen/dimen_100_dp"
+    android:layout_marginEnd="@dimen/dimen_12_dp"
+    android:background="@drawable/recomended_item_bg">
+
+    <ImageView
+        android:id="@+id/itemIconIv"
+        android:layout_width="@dimen/dimen_26_dp"
+        android:layout_height="@dimen/dimen_26_dp"
+        android:layout_marginStart="@dimen/dimen_12_dp"
+        android:layout_marginTop="@dimen/dimen_12_dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/btc" />
+
+    <TextView
+        android:id="@+id/cryptoNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_12_dp"
+        android:fontFamily="@font/opensans_medium"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="@dimen/dimen_14_sp"
+        app:layout_constraintBottom_toBottomOf="@id/itemIconIv"
+        app:layout_constraintStart_toEndOf="@id/itemIconIv"
+        app:layout_constraintTop_toTopOf="@id/itemIconIv"
+        tools:text="BTC" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_12_dp"
+        android:layout_marginBottom="@dimen/dimen_12_dp"
+        android:fontFamily="@font/opensans_medium"
+        android:textColor="@color/positive_green"
+        android:textSize="@dimen/dimen_14_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_goneMarginStart="@dimen/dimen_12_dp"
+        tools:text="+1.37%" />
+
+    <TextView
+        android:id="@+id/cryptoValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_12_dp"
+        android:layout_marginBottom="@dimen/dimen_12_dp"
+        android:textColor="@color/light_grey"
+        android:textSize="@dimen/dimen_14_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="216.3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

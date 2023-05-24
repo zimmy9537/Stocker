@@ -43,6 +43,13 @@ android {
     buildFeatures {
         viewBinding true
     }
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src/main/res', 'src/main/res/layouts/home'
+            }
+        }
+    }
 
 }
 

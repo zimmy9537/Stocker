@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.home.ui.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profileCardView"
+        android:layout_width="@dimen/dimen_52_dp"
+        android:layout_height="@dimen/dimen_52_dp"
+        android:layout_marginStart="@dimen/dimen_24_dp"
+        android:layout_marginTop="@dimen/dimen_24_dp"
+        android:background="@color/app_primary_light"
+        app:cardCornerRadius="@dimen/dimen_12_dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profilePic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_24_dp"
+        android:src="@drawable/setting"
+        app:layout_constraintBottom_toBottomOf="@id/profileCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/profileCardView" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_24_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/walletCardCv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_198_dp"
+                android:layout_marginStart="@dimen/dimen_24_dp"
+                android:layout_marginEnd="@dimen/dimen_24_dp"
+                android:background="@drawable/wallet_summary"
+                app:cardCornerRadius="@dimen/dimen_16_dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_16_dp"
+                        android:layout_marginTop="@dimen/dimen_24_dp"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="@string/my_wallet"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/walletAmountTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_medium"
+                        android:textColor="?attr/colorOnBackground"
+                        android:textSize="@dimen/dimen_32_sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="\u20B99000" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bestChoiceCl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_54_dp"
+                android:layout_marginStart="@dimen/dimen_24_dp"
+                android:layout_marginTop="@dimen/dimen_12_dp"
+                android:layout_marginEnd="@dimen/dimen_24_dp"
+                android:background="@drawable/trade_summary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/walletCardCv">
+
+                <ImageView
+                    android:id="@+id/bestChoiceIv"
+                    android:layout_width="@dimen/dimen_26_dp"
+                    android:layout_height="@dimen/dimen_26_dp"
+                    android:layout_marginStart="@dimen/dimen_11_dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/btc" />
+
+                <TextView
+                    android:id="@+id/bestChoiceCryptoTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_8_dp"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="@dimen/dimen_14_sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/bestChoiceIv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="BTC" />
+
+                <TextView
+                    android:id="@+id/bestChoicePercentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen_11_dp"
+                    android:fontFamily="@font/opensans_medium"
+                    android:textColor="@color/positive_green"
+                    android:textSize="@dimen/dimen_14_sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="3.8%" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_24_dp"
+                android:layout_marginTop="@dimen/dimen_24_dp"
+                android:text="@string/recommended"
+                android:textColor="?attr/colorOnBackground"
+                android:textSize="@dimen/dimen_16_sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bestChoiceCl" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommendedRv"
+                android:layout_width="0dp"
+                android:layout_height="101dp"
+                android:layout_marginStart="@dimen/dimen_24_dp"
+                android:layout_marginTop="@dimen/dimen_24_dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textview"
+                tools:itemCount="2"
+                tools:listitem="@layout/recommend_item" />
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_24_dp"
+                android:layout_marginTop="@dimen/dimen_24_dp"
+                android:text="@string/my_assets"
+                android:textColor="?attr/colorOnBackground"
+                android:textSize="@dimen/dimen_16_sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recommendedRv" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myAssetsTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_24_dp"
+                android:layout_marginTop="@dimen/dimen_24_dp"
+                android:layout_marginEnd="@dimen/dimen_24_dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textview1"
+                tools:listitem="@layout/assets_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
