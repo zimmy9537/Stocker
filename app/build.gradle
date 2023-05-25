@@ -23,6 +23,8 @@ android {
         properties.load(project.rootProject.file("local.properties").newDataInputStream())
         buildConfigField "String", "WEB_CLIENT_ID",
                 "\"${properties.getProperty("WEB_CLIENT_ID")}\""
+        buildConfigField "String", "ALPHAVANTAGE_API_KEY",
+                "\"${properties.getProperty("ALPHAVANTAGE_API_KEY")}\""
 
     }
 

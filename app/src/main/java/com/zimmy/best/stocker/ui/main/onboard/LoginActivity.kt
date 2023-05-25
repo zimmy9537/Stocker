@@ -120,19 +120,17 @@ class LoginActivity : AppCompatActivity() {
         } else {
             account.photoUrl.toString()
         }
-        Log.d("displayNamedisplayName","displayNamedisplayName $imageUrl")
-        Log.d("displayNamedisplayName","displayNamedisplayName uid ${mAuth.uid.toString()}")
         accountReference.child(mAuth.uid.toString())
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     firstTime = !snapshot.exists()
-                    Log.d("displayNamedisplayName","displayNamedisplayName $firstTime")
                     if (firstTime) {
                         val user = User(account.displayName!!, account.email!!, imageUrl)
-                        Log.d("displayNamedisplayName","displayNamedisplayName $user")
                         accountReference
                             .child(mAuth.uid.toString()).child(Constants.BASIC_DETAILS)
                             .setValue(user)
+                        accountReference.child(mAuth.uid.toString()).child(Constants.WALLET_BALANCE)
+                            .setValue(50000)
                         toast("Hello, " + account.displayName)
                         startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                         finish()
@@ -154,7 +152,12 @@ class LoginActivity : AppCompatActivity() {
                                         user.email
                                     )
                                     toast("welcome back ${user.name}")
-                                    startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+                                    startActivity(
+                                        Intent(
+                                            this@LoginActivity,
+                                            HomeActivity::class.java
+                                        )
+                                    )
                                     finish()
                                 }
 

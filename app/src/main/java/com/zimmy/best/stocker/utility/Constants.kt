@@ -5,6 +5,7 @@ class Constants {
         //firebase
         const val USERS = "Users"
         const val BASIC_DETAILS = "BasicDetails"
+        const val WALLET_BALANCE = "WalletBalance"
         const val GENERAL = "General"
         const val USERCOUNT = "userCount"
         const val DATA = "data"
