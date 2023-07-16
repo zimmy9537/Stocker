@@ -11,4 +11,5 @@
     <color name="positive_green">#39A798</color>
     <color name="negative_red">#E96D6D</color>
     <color name="light_grey">#8B9199</color>
+    <color name="transparent">#FFFFFF</color>
 </resources>

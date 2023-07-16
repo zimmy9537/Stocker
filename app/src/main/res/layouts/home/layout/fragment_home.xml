@@ -25,9 +25,11 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
+        android:id="@+id/nameTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_6dp"
+        android:fontFamily="@font/opensans_medium"
         app:layout_constraintBottom_toBottomOf="@id/profileCardView"
         app:layout_constraintStart_toEndOf="@id/profileCardView"
         app:layout_constraintTop_toTopOf="@id/profileCardView"
@@ -153,6 +155,7 @@
                 android:layout_marginStart="@dimen/dimen_24_dp"
                 android:layout_marginTop="@dimen/dimen_24_dp"
                 android:text="@string/recommended"
+                android:fontFamily="@font/opensans_medium"
                 android:textColor="?attr/colorOnBackground"
                 android:textSize="@dimen/dimen_16_sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -178,6 +181,7 @@
                 android:layout_marginStart="@dimen/dimen_24_dp"
                 android:layout_marginTop="@dimen/dimen_24_dp"
                 android:text="@string/my_assets"
+                android:fontFamily="@font/opensans_medium"
                 android:textColor="?attr/colorOnBackground"
                 android:textSize="@dimen/dimen_16_sp"
                 app:layout_constraintStart_toStartOf="parent"

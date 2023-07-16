@@ -63,7 +63,7 @@ class HomeFragment : Fragment() {
                     .addListenerForSingleValueEvent(object : ValueEventListener {
                         override fun onDataChange(snapshot: DataSnapshot) {
                             user = snapshot.getValue(User::class.java)!!
-                            Picasso.get().load(user.imageUrl).centerCrop().into(profilePic)
+                            Picasso.get().load(user.imageUrl).into(profilePic)
                         }
 
                         override fun onCancelled(error: DatabaseError) {
